@@ -1,0 +1,66 @@
+﻿@model CRWebsite.Models.RegisterModel
+
+@{
+    ViewData["Title"] = "Register";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Registered Form Values</h1>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Javian Picardo">
+    <link rel="stylesheet" type="text/css" href="~/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/bootstrap-select/css/bootstrap-select.min.css" />
+
+
+
+    <script type="text/javascript" src="~/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="~/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/bootstrap-select/js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="~/jquery-validate/jquery.validate.js"></script>
+
+    <script type="text/javascript" src="~/js/register.js"></script>
+</head>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <label id="FirstName" class="form-control">@Model.FirstName</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <label id="LastName" class="form-control">@Model.LastName</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <label id="Email" class="form-control">@Model.Email</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Region" class="control-label"></label>
+                <label id="Region" class="form-control">@Model.Region</label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Country" class="control-label"></label>
+                <label id="Country" class="form-control">@Model.Country</label>
+            </div>
+            <br/>            
+        </div>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    @{
+        await Html.RenderPartialAsync("_jQueryBootstrapPartial");
+    }
+    }

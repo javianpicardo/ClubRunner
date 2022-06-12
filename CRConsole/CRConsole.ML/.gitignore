@@ -1,0 +1,16 @@
+mathjax/
+fontawesome-free-5.12.1-web/
+bootstrap-4.4.1-dist/
+bootstrap-3.4.1-dist/
+bin/
+.vs/
+logs/
+fonts/
+files/
+*.DotSettings
+*.user
+packages/
+obj/
+lib/
+lib.old/
+lib.new/
